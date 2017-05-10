@@ -9,8 +9,16 @@
   </head>
 
   <body ng-controller="MainController">
-    <h1>Hello Plunker!</h1>
-    {{ message }}
+    <h1>{{ message }}</h1>
+    <h1>{{ error }}</h1>
+    <form name="searchUser">
+        <input type="search" placeholder="Type Username" ng-model="username" />
+        <input type="submit" value="Search" ng-click="search(username)"/>
+    </form>
+    <div>User name: {{ username }}</div>
+    <div>User name: {{ user.name }}</div>
+    <div>Location: {{ user.location }}</div>
+    <div><img ng-src="{{ user.avatar_url }}"></div>
   </body>
 
 </html>
